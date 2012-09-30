@@ -1,0 +1,87 @@
+﻿<Window x:Class="TableStorageTools.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        Title="Copy your Table Storage Azure" Height="480" Width="640">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="0,0,1,2">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Source :" Padding="10 0" />
+                <TextBox Text="{Binding SourceTableStorage}" Grid.Column="1" />
+
+                <CheckBox IsChecked="{Binding SourceIsDevelopmentStorage}" Content="Use Development Storage" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0 5 10 0" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1,0,0,2">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Destination :" Padding="10 0" />
+                <TextBox Text="{Binding DestinationTableStorage}" Grid.Column="1" />
+
+                <CheckBox IsChecked="{Binding DestinationIsDevelopmentStorage}" Content="Use Development Storage" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0 5 10 0" />
+            </Grid>
+        </Border>
+
+        <Border Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="Black" BorderThickness="0,0,0,2">
+            <Button Content="Load tables" Margin="5" Command="{Binding LoadTablesCommand}" />
+        </Border>
+
+        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0,0,1,0">
+            <ListView ItemsSource="{Binding SourceTables}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding IsSelected}" Content="{Binding Value}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="1,0,0,0">
+            <ListView ItemsSource="{Binding DestinationTables}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+
+        <Border Grid.ColumnSpan="2" Grid.Row="3" BorderBrush="Black" BorderThickness="0,2,0,0">
+            <Button Content="Export selected tables" Margin="5" Command="{Binding ExportTablesCommand}" />
+        </Border>
+        
+        <Border Grid.ColumnSpan="2" Grid.Row="4" BorderBrush="Black" BorderThickness="0,2,0,0">
+            <ProgressBar IsIndeterminate="{Binding IsBusy}" Margin="422,5,10,5" />
+        </Border>
+
+    </Grid>
+</Window>
