@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.UI", "TableStorageTools.UI\TableStorageTools.UI.csproj", "{D795E1F4-451E-446C-95AF-E8DC4391EAA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.Model", "TableStorageTools.Model\TableStorageTools.Model.csproj", "{8FE47AE8-71B1-41C6-8BF5-C6A446F75E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.Services", "TableStorageTools.Services\TableStorageTools.Services.csproj", "{95DE5CE1-C708-4CB6-A88B-09F2AD36524A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.Tools", "TableStorageTools.Tools\TableStorageTools.Tools.csproj", "{80EF4D48-9884-42C8-8BC1-B5C67F395B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.ViewModels", "TableStorageTools.ViewModels\TableStorageTools.ViewModels.csproj", "{A5341B9E-FEAC-4F5C-AEB0-EB954E9E5965}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageTools.Tests", "TableStorageTools.Tests\TableStorageTools.Tests.csproj", "{7040B6E7-F36F-45B3-B85B-15DAFAA3EAC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{2F86B982-245A-4EA0-9C86-57AA49CAE120}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Microsoft.WindowsAzure.Configuration.dll = Assemblies\Microsoft.WindowsAzure.Configuration.dll
+		Assemblies\Microsoft.WindowsAzure.ServiceRuntime.dll = Assemblies\Microsoft.WindowsAzure.ServiceRuntime.dll
+		Assemblies\Microsoft.WindowsAzure.StorageClient.dll = Assemblies\Microsoft.WindowsAzure.StorageClient.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs08
+		SccProjectUniqueName0 = TableStorageTools.Model\\TableStorageTools.Model.csproj
+		SccProjectName0 = TableStorageTools.Model
+		SccLocalPath0 = TableStorageTools.Model
+		SccProjectUniqueName1 = TableStorageTools.Services\\TableStorageTools.Services.csproj
+		SccProjectName1 = TableStorageTools.Services
+		SccLocalPath1 = TableStorageTools.Services
+		SccProjectUniqueName2 = TableStorageTools.Tests\\TableStorageTools.Tests.csproj
+		SccProjectName2 = TableStorageTools.Tests
+		SccLocalPath2 = TableStorageTools.Tests
+		SccProjectUniqueName3 = TableStorageTools.Tools\\TableStorageTools.Tools.csproj
+		SccProjectName3 = TableStorageTools.Tools
+		SccLocalPath3 = TableStorageTools.Tools
+		SccProjectUniqueName4 = TableStorageTools.UI\\TableStorageTools.UI.csproj
+		SccProjectName4 = TableStorageTools.UI
+		SccLocalPath4 = TableStorageTools.UI
+		SccProjectUniqueName5 = TableStorageTools.ViewModels\\TableStorageTools.ViewModels.csproj
+		SccProjectName5 = TableStorageTools.ViewModels
+		SccLocalPath5 = TableStorageTools.ViewModels
+		SccLocalPath6 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D795E1F4-451E-446C-95AF-E8DC4391EAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D795E1F4-451E-446C-95AF-E8DC4391EAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D795E1F4-451E-446C-95AF-E8DC4391EAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D795E1F4-451E-446C-95AF-E8DC4391EAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE47AE8-71B1-41C6-8BF5-C6A446F75E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE47AE8-71B1-41C6-8BF5-C6A446F75E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE47AE8-71B1-41C6-8BF5-C6A446F75E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE47AE8-71B1-41C6-8BF5-C6A446F75E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DE5CE1-C708-4CB6-A88B-09F2AD36524A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DE5CE1-C708-4CB6-A88B-09F2AD36524A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DE5CE1-C708-4CB6-A88B-09F2AD36524A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DE5CE1-C708-4CB6-A88B-09F2AD36524A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EF4D48-9884-42C8-8BC1-B5C67F395B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EF4D48-9884-42C8-8BC1-B5C67F395B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EF4D48-9884-42C8-8BC1-B5C67F395B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EF4D48-9884-42C8-8BC1-B5C67F395B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5341B9E-FEAC-4F5C-AEB0-EB954E9E5965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5341B9E-FEAC-4F5C-AEB0-EB954E9E5965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5341B9E-FEAC-4F5C-AEB0-EB954E9E5965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5341B9E-FEAC-4F5C-AEB0-EB954E9E5965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7040B6E7-F36F-45B3-B85B-15DAFAA3EAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7040B6E7-F36F-45B3-B85B-15DAFAA3EAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7040B6E7-F36F-45B3-B85B-15DAFAA3EAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7040B6E7-F36F-45B3-B85B-15DAFAA3EAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
