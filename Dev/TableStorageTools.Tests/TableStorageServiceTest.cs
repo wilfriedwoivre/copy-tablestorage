@@ -58,7 +58,7 @@ namespace TableStorageTools.Tests
         [TestMethod]
         public void CloudStorageIsInWindowsAzure()
         {
-            var service = _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", "DefaultEndpointsProtocol=https;AccountName=blogwilfriedwoivre;AccountKey=JyRZfh+8Llph4Bd6hv+nw1wX4GBMYiuZCgI/3PCCy7ZwFZ8wApHimP8lYT4vy/BZgrAUX9ROgOTm73sKLxDwMQ=="));
+            var service = _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", "Define Storage Account"));
 
             Assert.IsNotNull(service);
 
@@ -146,7 +146,7 @@ namespace TableStorageTools.Tests
         [TestMethod]
         public void ListTableWhenStorageAccountIsInWindowsAzure()
         {
-            var service = _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", "DefaultEndpointsProtocol=https;AccountName=blogwilfriedwoivre;AccountKey=JyRZfh+8Llph4Bd6hv+nw1wX4GBMYiuZCgI/3PCCy7ZwFZ8wApHimP8lYT4vy/BZgrAUX9ROgOTm73sKLxDwMQ=="));
+            var service = _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", "Define Storage Account"));
 
             Assert.IsNotNull(service);
 
