@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using Microsoft.Expression.Interactivity.Core;
 using TableStorageTools.Model;
@@ -93,9 +94,6 @@ namespace TableStorageTools.ViewModels
             _container = container;
             LoadTablesCommand = new ActionCommand(LoadTables);
             ExportTablesCommand = new ActionCommand(ExportTables);
-
-            SourceTableStorage =
-                "DefaultEndpointsProtocol=https;AccountName=blogwilfriedwoivre;AccountKey=JyRZfh+8Llph4Bd6hv+nw1wX4GBMYiuZCgI/3PCCy7ZwFZ8wApHimP8lYT4vy/BZgrAUX9ROgOTm73sKLxDwMQ==";
         }
 
         public override void OnLoad()
@@ -148,11 +146,24 @@ namespace TableStorageTools.ViewModels
 
         private async void LoadTables(string cloudStorageAccount, Action<List<string>> addItem)
         {
-            List<string> result = await _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", cloudStorageAccount)).GetTablesNames(null, 10);
-
-            if (addItem != null)
+            try
             {
-                addItem(result);
+                List<string> result =
+                    await
+                    _container.Resolve<ITableStorageService>(new ParameterOverride("storageAccount", cloudStorageAccount))
+                        .GetTablesNames(null, 10);
+
+                if (addItem != null)
+                {
+                    addItem(result);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(
+                    "Your storage account must be formated like this : 'DefaultEndpointsProtocol=[https|http];AccountName={AccountStorageName};AccountKey={AccountStorageKey}'");
+
+                addItem(new List<string>());
             }
         }
     }
