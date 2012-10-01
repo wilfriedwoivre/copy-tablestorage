@@ -127,6 +127,17 @@ namespace TableStorageTools.ViewModels
 
         private async void ExportTables()
         {
+            if (string.IsNullOrEmpty(SourceTableStorage) ||string.IsNullOrEmpty(DestinationTableStorage))
+            {
+                MessageBox.Show("Define tables storage before execute this action");
+                return;
+            }
+            if (!SourceTables.Any(n => n.IsSelected))
+            {
+                MessageBox.Show("Please select tables that you would copy.");
+                return;
+            }
+
             IsBusy = true;
             await _container.Resolve<IExportTableStorageService>().Copy(SourceTableStorage, DestinationTableStorage,
                                                                              SourceTables.Where(n => n.IsSelected).Select(n => n.Value).ToList());
